@@ -71,7 +71,7 @@ GitHubService service = retrofit.create(GitHubService.class);</pre>
               <p>Annotations on the interface methods and its parameters indicate how a request will be handled.</p>
 
               <h4>Request Method</h4>
-              <p>Every method must have an HTTP annotation that provides the request method and relative URL. There are five built-in annotations: <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, and <code>HEAD</code>. The relative URL of the resource is specified in the annotation.</p>
+              <p>Every method must have an HTTP annotation that provides the request method and relative URL. There are eight built-in annotations: <code>HTTP</code>, <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code>, <code>OPTIONS</code> and <code>HEAD</code>. The relative URL of the resource is specified in the annotation.</p>
               <pre class="prettyprint">@GET("users/list")</pre>
               <p>You can also specify query parameters in the URL.</p>
               <pre class="prettyprint">@GET("users/list?sort=desc")</pre>
@@ -172,7 +172,7 @@ GitHubService service = retrofit.create(GitHubService.class);</pre>
               <pre class="prettyprint">
 implementation 'com.squareup.retrofit2:retrofit:<span class="version pln"><em>(insert latest version)</em></span>'
 </pre>
-              <p>Retrofit requires at minimum Java 7 or Android 2.3.</p>
+              <p>Retrofit requires at minimum Java 8+ or Android API 21+.</p>
 
               <h4>R8 / ProGuard</h4>
               <p>If you are using R8 or ProGuard add the options from <a href="https://github.com/square/retrofit/blob/master/retrofit/src/main/resources/META-INF/proguard/retrofit2.pro">this file</a>.</p>
@@ -182,7 +182,7 @@ implementation 'com.squareup.retrofit2:retrofit:<span class="version pln"><em>(i
             <section id="contributing">
               <h3>Contributing</h3>
               <p>If you would like to contribute code you can do so through GitHub by forking the repository and sending a pull request.</p>
-              <p>When submitting code, please make every effort to follow existing conventions and style in order to keep the code as readable as possible. Please also make sure your code compiles by running <code>mvn clean verify</code>.</p>
+              <p>When submitting code, please make every effort to follow existing conventions and style in order to keep the code as readable as possible. Please also make sure your code compiles by running <code>./gradlew build</code> (or <code>gradlew.bat build</code> for Windows).</p>
               <p>Before your code can be accepted into the project you must also sign the <a href="https://squ.re/sign-the-cla">Individual Contributor License Agreement (CLA)</a>.</p>
             </section>
 

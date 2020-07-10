@@ -1,6 +1,41 @@
 Change Log
 ==========
 
+Version 2.9.0 *(2020-05-20)*
+----------------------------
+
+ * New: RxJava 3 adapter!
+
+   The Maven coordinates are `com.squareup.retrofit2:adapter-rxjava3`.
+
+   Unlike the RxJava 1 and RxJava 2 adapters, the RxJava 3 adapter's `create()` method will produce asynchronous HTTP requests by default. For synchronous requests use `createSynchronous()` and for synchronous on a scheduler use `createWithScheduler(..)`.
+
+
+Version 2.8.2 *(2020-05-18)*
+----------------------------
+
+ * Fix: Detect running on the Android platform by using system property rather than the presence of classes.
+   This ensures that even when you're running on the JVM with Android classes present on the classpath you
+   get JVM semantics.
+ * Fix: Update to OkHttp 3.14.9 which contains an associated Android platform detection fix.
+
+
+Version 2.8.1 *(2020-03-25)*
+----------------------------
+
+ * Fix: Do not access `MethodHandles.Lookup` on Android API 24 and 25. The class is only available
+   on Android API 26 and higher.
+
+
+Version 2.8.0 *(2020-03-23)*
+----------------------------
+
+ * New: Add `Call.timeout()` which returns the `okio.Timeout` of the full call.
+ * Fix: Change `Call.awaitResponse()` to accept a nullable response type.
+ * Fix: Support default methods on Java 14+. We had been working around a bug in earlier versions of
+   Java. That bug was fixed in Java 14, and the fix broke our workaround.
+
+
 Version 2.7.2 *(2020-02-24)*
 ----------------------------
 
