@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>samples-self</artifactId>
+<<<<<<< HEAD
     <name>SamplesTest</name>
 
     <dependencies>
@@ -19,6 +20,12 @@
             <version>${kotlin.version}</version>
         </dependency>
         <dependency>
+=======
+
+
+    <dependencies>
+        <dependency>
+>>>>>>> 9dd39f7a20fcc3c063b4573804e535487a5d88bc
             <groupId>${project.groupId}</groupId>
             <artifactId>retrofit</artifactId>
             <version>${project.version}</version>
@@ -66,6 +73,27 @@
             <artifactId>jsoup</artifactId>
             <version>${jsoup.version}</version>
         </dependency>
+<<<<<<< HEAD
+=======
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>logging-interceptor</artifactId>
+            <version>3.10.0</version>
+        </dependency>
+>>>>>>> 9dd39f7a20fcc3c063b4573804e535487a5d88bc
     </dependencies>
 
     <build>
@@ -78,6 +106,7 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+<<<<<<< HEAD
 
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -96,6 +125,8 @@
                     </execution>
                 </executions>
             </plugin>
+=======
+>>>>>>> 9dd39f7a20fcc3c063b4573804e535487a5d88bc
         </plugins>
     </build>
 </project>
